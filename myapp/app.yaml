@@ -1,4 +1,4 @@
-application: firstday
+application: digital-1168
 version: 1
 runtime: go
 api_version: go1
