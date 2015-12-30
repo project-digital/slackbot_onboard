@@ -1,12 +1,15 @@
 language: go
 sudo: false
 go:
-  - 1.3
-  - 1.4
-  - 1.5
-  - tip
+- 1.3
+- 1.4
+- 1.5
+- tip
 install:
-  - 
+- 
 script:
-  - go get -t -v ./...
-  -
+- go get -t -v ./...
+- 
+before_install:
+- openssl aes-256-cbc -K $encrypted_6f470b015f2a_key -iv $encrypted_6f470b015f2a_iv
+  -in client-secret.json.enc -out client-secret.json -d
