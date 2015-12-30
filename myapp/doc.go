@@ -2,4 +2,4 @@
 /*
 
 */
-package hello
+package myapp
