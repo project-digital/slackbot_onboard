@@ -2,4 +2,4 @@
 /*
 
 */
-package slackbot-onboard
+package hello
