@@ -16,6 +16,7 @@ install:
 -
 
 script:
+- cd ../
 - echo "No Script to run"
 
 deploy:
