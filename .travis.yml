@@ -17,7 +17,7 @@ script:
 
 deploy:
   provider: gae
-  keyfile: client-secret.json.enc
+  keyfile: client-secret.json
   project: digital-1168
   default: true
   #version: 2
