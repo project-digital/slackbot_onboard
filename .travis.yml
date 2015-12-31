@@ -22,5 +22,6 @@ deploy:
   #version: 2
   on:
     all_branches: true
-    repo: project-digital/slackbot-onboard
+    skip_cleanup: true
+    #repo: project-digital/slackbot-onboard
     #tags: true
