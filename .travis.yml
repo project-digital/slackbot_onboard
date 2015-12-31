@@ -7,6 +7,8 @@ go:
 
 before_install:
 - cd slackbot-onboard
+- pwd
+- ls
 - openssl aes-256-cbc -K $encrypted_6f470b015f2a_key -iv $encrypted_6f470b015f2a_iv
   -in client-secret.json.enc -out client-secret.json -d
 
