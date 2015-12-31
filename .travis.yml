@@ -13,7 +13,6 @@ install:
   
 script:
 - echo "No Script to run"
-#- go get -t -v ./...
 
 deploy:
   provider: gae
