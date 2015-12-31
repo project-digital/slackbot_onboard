@@ -19,8 +19,8 @@ deploy:
   provider: gae
   keyfile: client-secret.json
   project: digital-1168
-  default: true
-  #version: 2
+  #default: true
+  version: 2
   on:
     all_branches: true
     repo: project-digital/slackbot-onboard
