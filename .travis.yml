@@ -14,7 +14,7 @@ install:
 
 script:
 - echo "No Script to run"
-- cd slackbot-onboard
+- cd ./slackbot-onboard
 
 deploy:
   provider: gae
