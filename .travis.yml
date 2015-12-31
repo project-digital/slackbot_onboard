@@ -24,5 +24,5 @@ deploy:
   on:
     all_branches: true
     repo: project-digital/slackbot-onboard
-    tags: false
+    tags: true
 
