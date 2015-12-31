@@ -22,3 +22,6 @@ deploy:
   project: digital-1168
   #default: true
   version: 2
+  on:
+    all_branches: true
+
