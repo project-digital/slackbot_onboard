@@ -10,11 +10,9 @@ before_install:
   -in client-secret.json.enc -out client-secret.json -d
 
 install:
-- 
   
 script:
 - go get -t -v ./...
-#- gcloud config set project digital-1168
 
 deploy:
   provider: gae
@@ -26,4 +24,3 @@ deploy:
     all_branches: true
     repo: project-digital/slackbot-onboard
     #tags: true
-
