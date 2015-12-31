@@ -14,7 +14,7 @@ install:
   
 script:
 - go get -t -v ./...
-- gcloud config set project digital-1168
+#- gcloud config set project digital-1168
 
 deploy:
   provider: gae
