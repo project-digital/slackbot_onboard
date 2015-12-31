@@ -12,7 +12,8 @@ before_install:
 install:
   
 script:
-- go get -t -v ./...
+- echo "No Script to run"
+#- go get -t -v ./...
 
 deploy:
   provider: gae
