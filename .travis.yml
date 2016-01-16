@@ -22,9 +22,9 @@ before_install:
 - echo $GOROOT
 - echo $GOPATH
 # - go get -v ./... # Fix after file movement
-#- go get -d ./... # skips dependency
+# - go get -d ./... # skips dependency
 
-install: true
+# install: true
 
 script:
 # gover alternative prep to goveralls to coveralls # Not Maintained
