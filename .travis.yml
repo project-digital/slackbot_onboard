@@ -2,33 +2,26 @@ language: go
 sudo: false
 go:
 - tip
-
 notifications:
-  slack: projectdigital:7za1wlbrrIkf3Bs5N4S00Kr1
-
+  slack:
+    secure: EXdYUwSgsu3w610iFkE3o8fhh180OEdERqSN92V89JrjjKoz7VH8GKG/gIugfibWjyYXbfdJixnTswSAVkHMiNH2ueFg85vWj77EOdGURElLx3zK/ojLWdMRvkQSaVyrGoHXkWV2TDgcMoXy3zXuUXeB224RdUt3uGVY/eGFN0h0TIgjxI2yu82GhnfnoGjY3p0SBSRiEab5pbUm4X8cGWlPMPlfn7nBIIwmElkKpcSHy0a/tz6jNBT/dvmsS+y4XXQCjxpPS6zLltm0vtZ6zxKb+Z8Xd1n3SQ3rPdrZQuqFF7m5V64dqMV0+91dBnMNq5QowMvZjClgisjRvzyH8KKG+2V4TO2xGVfgkEif+ej4VQOLD3Z8FMO0uA37SPUuX6eTomfXeWfqsN4bpYetAXPcMIYIoImMKk1v4+bQlOrfPdta7Vz/tpOs5sgIx0GpsL/LbuEjqRSVDAtOlwRTolncQurJV4kl8ogZmpsBPPkyFiJUx/xc0SgYmLl36ExgDZ9ujAO10FiX1SIxH2SRcjTu/eDlD6Lod7QJ4gJA7Z1lXmENUtDR+MUiXb77kifMW7QePDApC8TYIhrOFbN5X1+uQ/f3hV3uzZ/zGMkFw1+Nc0e/k2IB26CyHQPtsT3HqYd/dDd3sTqhshocK0BJu9oY7O7QqfLTlwfzM8VtJys=
 before_install:
 - cd slackbot_onboard
 - pwd
 - ls
 - openssl aes-256-cbc -K $encrypted_6f470b015f2a_key -iv $encrypted_6f470b015f2a_iv
   -in client-secret.json.enc -out client-secret.json -d
-
 install:
--
-
+- 
 script:
 - echo "No Script to run"
-
 deploy:
   provider: gae
   keyfile: client-secret.json
   project: digital-1168
   default: true
   verbosity: debug
-  config: ../app.yaml
-  #version: 2
+  config: "../app.yaml"
   on:
     all_branches: true
     skip_cleanup: true
-    #repo: project-digital/slackbot_onboard
-    #tags: true
