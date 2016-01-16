@@ -14,17 +14,18 @@ before_install:
   -in client-secret.json.enc -out client-secret.json -d
 # - cd ../
 # Start coveralls
-- go get golang.org/x/tools/cmd/cover
-- go get github.com/modocache/gover
-- go get github.com/mattn/goveralls
-- go get github.com/onsi/ginkgo/ginkgo
-- go get github.com/onsi/gomega
-- echo $GOROOT
-- echo $GOPATH
-# - go get -v ./... # Fix after file movement
-# - go get -d ./... # skips dependency
+#- go get golang.org/x/tools/cmd/cover
+#- go get github.com/modocache/gover
+#- go get github.com/mattn/goveralls
+#- go get github.com/onsi/ginkgo/ginkgo
+#- go get github.com/onsi/gomega
+#- echo $GOROOT
+#- echo $GOPATH
+#- go get -v ./... # Fix after file movement
+#- go get -d ./... # skips dependency
 
-# install: true
+install:
+- 
 
 script:
 # gover alternative prep to goveralls to coveralls # Not Maintained
