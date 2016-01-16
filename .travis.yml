@@ -39,6 +39,9 @@ script:
 #- go test -v -covermode=count -coverprofile=coverage.out
 #- $(go env GOPATH | awk 'BEGIN{FS=":"} {print $1}')/bin/goveralls -coverprofile=coverage.out -service=travis-ci -repotoken $COVERALLS_TOKEN
 
+before deploy:
+- cd ../
+
 deploy:
   provider: gae
   keyfile: client-secret.json
