@@ -19,6 +19,8 @@ before_install:
 - go get github.com/mattn/goveralls
 - go get github.com/onsi/ginkgo/ginkgo
 - go get github.com/onsi/gomega
+- echo $GOROOT
+- echo $GOPATH
 - go get -v ./...
 
 install:
