@@ -21,15 +21,15 @@ before_install:
 - go get github.com/onsi/gomega
 - echo $GOROOT
 - echo $GOPATH
-#- go get -v ./...
-- go get -d ./...
+- go get -v ./...
+#- go get -d ./...
 
 install:
 - 
 
 script:
 #- $HOME/gopath/bin/goveralls -service=travis-ci
-#- ginkgo -r --randomizeAllSpecs -cover --v  --trace --progress --keepGoing -dryRun
+#- ginkgo -r --randomizeAllSpecs -cover --v  --trace --progress --keepGoing
 #- gover
 #- goveralls -service=travis-ci \
 #    -coverprofile=gover.coverprofile \
