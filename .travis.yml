@@ -21,7 +21,8 @@ before_install:
 - go get github.com/onsi/gomega
 - echo $GOROOT
 - echo $GOPATH
-- go get -v ./...
+#- go get -v ./...
+- go get -d ./...
 
 install:
 - 
