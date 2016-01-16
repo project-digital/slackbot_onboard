@@ -48,7 +48,7 @@ deploy:
   project: digital-1168
   default: true
   verbosity: debug
-  config: "../app.yaml"
+  config: "app.yaml"
   on:
     all_branches: true
     skip_cleanup: true
