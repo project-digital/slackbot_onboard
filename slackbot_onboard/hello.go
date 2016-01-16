@@ -1,4 +1,4 @@
-package slackbot-onboard
+package slackbot_onboard
 
 import (
     "fmt"
