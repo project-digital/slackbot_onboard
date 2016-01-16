@@ -3,6 +3,5 @@
 package main 
 
 import (
-	"fmt"
 	//"github.com/project-digital/slackbot_onboard"
 )
