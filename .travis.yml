@@ -14,6 +14,7 @@ before_install:
 - openssl aes-256-cbc -K $encrypted_78a1dd06b689_key -iv $encrypted_78a1dd06b689_iv
   -in client-secret.json.enc -out client-secret.json -d
 # - cd ../
+# Start coveralls
 - go get golang.org/x/tools/cmd/cover
 - go get github.com/modocache/gover
 - go get github.com/mattn/goveralls
@@ -22,19 +23,19 @@ before_install:
 - echo $GOROOT
 - echo $GOPATH
 - go get -v ./...
-#- go get -d ./...
+#- go get -d ./... # skips dependency
 
-install:
-- 
+install: true
 
 script:
-#- $HOME/gopath/bin/goveralls -service=travis-ci
-- ginkgo -r --randomizeAllSpecs -cover --v  --trace --progress --keepGoing
-- gover
-- goveralls -service=travis-ci \
-    -coverprofile=gover.coverprofile \
-    -repotoken $COVERALLS_TOKEN
+# gover alternative prep to goveralls to coveralls # Not Maintained
+#- ginkgo -r --randomizeAllSpecs -cover --v  --trace --progress --keepGoing
+#- gover
+#- goveralls -service=travis-ci \
+#    -coverprofile=gover.coverprofile \
+#    -repotoken $COVERALLS_TOKEN
 
+# Guide from Coveralls (bottom)
 #- go test -v -covermode=count -coverprofile=coverage.out
 #- $(go env GOPATH | awk 'BEGIN{FS=":"} {print $1}')/bin/goveralls -coverprofile=coverage.out -service=travis-ci -repotoken $COVERALLS_TOKEN
 
