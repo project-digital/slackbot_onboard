@@ -1,6 +1,6 @@
 // Package slackbot_onboard (Placeholder for future documentation)/
 // Via this format godoc will auto-generate and display the documenation online.
-package doc
+package slackbot_onboard
 
 import (
 	"fmt"
