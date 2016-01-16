@@ -3,6 +3,9 @@ sudo: false
 go:
 - tip
 
+notifications:
+  slack: projectdigital:7za1wlbrrIkf3Bs5N4S00Kr1
+
 before_install:
 - cd slackbot_onboard
 - pwd
