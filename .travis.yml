@@ -28,7 +28,7 @@ install:
 - 
 
 script:
-- $HOME/gopath/bin/goveralls -service=travis-ci
+#- $HOME/gopath/bin/goveralls -service=travis-ci
 - ginkgo -r --randomizeAllSpecs -cover --v  --trace --progress --keepGoing
 - gover
 - goveralls -service=travis-ci \
