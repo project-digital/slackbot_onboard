@@ -13,14 +13,24 @@ before_install:
 - ls
 - openssl aes-256-cbc -K $encrypted_78a1dd06b689_key -iv $encrypted_78a1dd06b689_iv
   -in client-secret.json.enc -out client-secret.json -d
-- go get github.com/axw/gocov/gocov
+- go get code.google.com/p/go.tools/cmd/cover
+- go get github.com/modocache/gover
 - go get github.com/mattn/goveralls
+- go get github.com/onsi/ginkgo/ginkgo
+- go get github.com/onsi/gomega
+- go get -v ./...
 
 install:
 - 
 
 script:
-- $HOME/gopath/bin/goveralls -service=travis-ci
+#- $HOME/gopath/bin/goveralls -service=travis-ci
+- ginkgo -r --randomizeAllSpecs -cover
+- gover
+- goveralls -service=travis-ci \
+    -coverprofile=gover.coverprofile \
+    -repotoken $COVERALLS_TOKEN
+
 
 deploy:
   provider: gae
