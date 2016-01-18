@@ -81,7 +81,20 @@ var bot = controller.spawn({
 }).startRTM();
 
 controller.on('bot_channel_join',function(bot,message){
-  bot.reply(message,"Welcome to the bot");
+    bot.startConversation(message, function(err, convo){
+      convo.on('end', function(convo){
+          if(convo.status =='active'){
+            convo.stop();
+          }
+      });
+      convo.ask(message,"Welcome to the OnBoarding Bot. To get started, what is your business name? (To stop setup at anytime, type 'end')",[
+            {
+              callback: function(response, convo){
+                convo.say("Great, so your company is: " + response);
+              }
+            }
+        ]);
+    });
 });
 
 controller.hears(['hello','hi'],'direct_message,direct_mention,mention',function(bot, message) {
