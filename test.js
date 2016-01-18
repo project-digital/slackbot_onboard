@@ -87,11 +87,11 @@ controller.on('bot_channel_join',function(bot,message){
             convo.say("Great, so your company is: " + response.text);
             convo.next();
           });
-      convo.on('end', function(convo){
+      /*convo.on('end', function(convo){
           if(convo.status =='active'){
             convo.stop();
           }
-      });
+      });*/
     });
 });
 
