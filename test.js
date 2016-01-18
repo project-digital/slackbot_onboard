@@ -84,7 +84,7 @@ controller.on('bot_channel_join',function(bot,message){
     bot.reply(message, "Welcome to the OnBoarding bot. To get started, type 'setup'");
 });
 
-controller.hears(['setup'],'ambient',function(bot,message){
+controller.hears(['setup'],'ambient,direct_message,direct_mention,mention',function(bot,message){
 
     bot.startConversation(message, function(err, convo){
       
