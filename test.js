@@ -80,7 +80,7 @@ var bot = controller.spawn({
     token: process.env.token
 }).startRTM();
 
-controller.on('channel_joined',function(bot,message){
+controller.on('bot_channel_join',function(bot,message){
   bot.reply(message,"Welcome to the bot");
 });
 
