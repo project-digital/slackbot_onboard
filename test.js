@@ -82,7 +82,7 @@ var bot = controller.spawn({
 
 controller.on('channel_joined',function(bot,message){
   bot.reply(message,"Welcome to the bot");
-})
+});
 
 controller.hears(['hello','hi'],'direct_message,direct_mention,mention',function(bot, message) {
 
