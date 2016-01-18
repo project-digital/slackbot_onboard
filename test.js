@@ -84,10 +84,11 @@ controller.on('bot_channel_join',function(bot,message){
     bot.reply(message, "Welcome to the OnBoarding bot. To get started, type 'setup'");
 });
 
-controller.hears('setup','ambient',function(bot,message){
+controller.hears(['setup'],'ambient',function(bot,message){
+
     bot.startConversation(message, function(err, convo){
       
-      convo.ask(message,"Welcome to the OnBoarding Bot. To get started, what is your business name? (To stop setup at anytime, type 'end')",function(response, convo){
+      convo.ask(message,"To get started, what is your company name?",function(response, convo){
             convo.say("Great, so your company is: " + response.text);
             convo.next();
           });
