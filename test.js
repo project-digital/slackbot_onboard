@@ -73,7 +73,7 @@ var Botkit = require('./lib/Botkit.js');
 var os = require('os');
 
 var controller = Botkit.slackbot({
-    debug: false,
+    debug: true,
 });
 
 var bot = controller.spawn({
