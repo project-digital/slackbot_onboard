@@ -80,7 +80,7 @@ var bot = controller.spawn({
     token: process.env.token
 }).startRTM();
 
-controller.on('im_created',function(bot,message){
+controller.on('hello',function(bot,message){
   bot.reply(message,"Welcome to the bot");
 })
 
